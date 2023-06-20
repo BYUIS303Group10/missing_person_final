@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Missing People Information</h2>
+
+<table>
+  <tr>
+    <th>Date Missing</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Age At Missing</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Gender</th>
+    <th>Race</th>
+  </tr>
+  {% for sName in people%}
+  <tr>
+    <td>{{sName.date_missing}}</td>
+    <td>{{sName.first_name}}</td>
+    <td>{{sName.last_name}}</td>
+    <td>{{sName.age_at_missing}}</td>
+    <td>{{sName.city}}</td>
+    <td>{{sName.state}}</td>
+    <td>{{sName.gender}}</td>
+    <td>{{sName.race}}</td>
+  </tr>
+{%endfor%}
+</table>
+
+</body>
+</html>
+
+
+   
