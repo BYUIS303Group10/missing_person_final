@@ -88,11 +88,11 @@
                                     <h2 class = "post-title">Human Trafficking In Utah</h2>
                                 </div>
                                 {% for person in people %}
-                                    <ul>
+                                    <p>
                                         <a href="{% url 'person' %}">
                                             {{person.first_name}} {{person.last_name}}
                                         </a>
-                                    </ul>
+                                    </p>
                                 {% endfor %}
                     </div>
                 </div>
