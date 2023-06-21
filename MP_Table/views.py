@@ -27,3 +27,17 @@ def personView(request):
         'people' : data
     }
     return render(request, 'MP_Table/person.html', context)
+
+
+def individualView(request, fName, lName):
+    data = People.objects.filter(first_name = fName, last_name = lName)
+    person = data[0]
+
+    context = {
+        'person' : person,
+    }
+
+
+
+    return render(request, 'MP_Table/individual.html', context)
+

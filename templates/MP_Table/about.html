@@ -85,11 +85,17 @@
                                 <main class="mb-4">
                                 <div>
                                     <br>
-                                    <h2 class = "post-title">Human Trafficking In Utah</h2>
+                                    <a href="/person">
+                                        <h2 class="post-title">Human Trafficking In Utah</h2>
+                                    </a>
                                 </div>
                                 {% for person in people %}
                                     <p>
-                                        <a href="{% url 'person' %}">
+                                        {% comment %} <a href="{% url 'person'  %}">
+                                            {{person.first_name}} {{person.last_name}}
+                                        </a> {% endcomment %}
+
+                                        <a href="/individual/{{person.first_name}}/{{person.last_name}}">
                                             {{person.first_name}} {{person.last_name}}
                                         </a>
                                     </p>
